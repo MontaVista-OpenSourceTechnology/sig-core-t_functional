@@ -7,4 +7,9 @@
 # Separated by |
 8|tests/p_gzip/30-gzexe-test|https://apps.centos.org/kanboard/project/23/task/833
 8|tests/p_diffutils/10-cmp-tests|https://bugzilla.redhat.com/show_bug.cgi?id=1732960
+7|tests/p_java-openjdk/0-install-openjdk.sh
+7|tests/p_java-openjdk/10-test_java.sh
+7|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
+7|tests/z_repoclosure/repoclosure_test.sh
+7|tests/z_rpminfo/check-rpminfo.sh
 
