@@ -12,4 +12,5 @@
 7|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
 7|tests/z_repoclosure/repoclosure_test.sh
 7|tests/z_rpminfo/check-rpminfo.sh
+7|tests/p_yum/yum_distroverpkg.sh
 
