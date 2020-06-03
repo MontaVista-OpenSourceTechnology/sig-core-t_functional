@@ -19,6 +19,9 @@ if [ "$centos_ver" -ge 7 ] ; then
     if [ "$uname_arch" == "ppc64le" -a "$uname_kernel" == "4.18.0" ];then
       # power9 with c8 kernel
       ring=.builtin_trusted_keys
+    elif [ "$uname_kernel" == "4.18.0" ]; then
+      echo "SKIP: Running Montavista custom 4.18 kernel on CentOS 7"
+      exit 0
     else
       ring=.system_keyring
     fi
