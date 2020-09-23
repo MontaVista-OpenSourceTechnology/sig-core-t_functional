@@ -16,4 +16,7 @@
 7|tests/p_yum/yum_distroverpkg.sh
 7|tests/p_kernel/02_kernel_secureboot_signed.sh
 7|tests/p_centos-release/centos-release_centos-base_repos.sh
+7|tests/p_centos-release/centos-release_release_compat_symlinks.sh
+7|tests/p_centos-release/centos-release_system_release.sh
+7|tests/p_lsb/lsb_release_brand_test.sh
 

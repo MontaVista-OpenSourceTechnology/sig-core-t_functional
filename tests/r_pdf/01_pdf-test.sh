@@ -8,7 +8,7 @@ if [ "$centos_ver" = "5" ] ;then
 else
   FILE=/etc/centos-release
 fi
-FIND='CentOS'
+FIND='Linux'
 PS_FILE=/var/tmp/test.ps
 PDF_FILE=/var/tmp/test.pdf
 TEST_FILE=/var/tmp/result
