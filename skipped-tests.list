@@ -19,4 +19,6 @@
 7|tests/p_centos-release/centos-release_release_compat_symlinks.sh
 7|tests/p_centos-release/centos-release_system_release.sh
 7|tests/p_lsb/lsb_release_brand_test.sh
+6|tests/p_python/20-python-mysql-test.sh
+6|tests/r_pdf/01_pdf-test.sh
 
