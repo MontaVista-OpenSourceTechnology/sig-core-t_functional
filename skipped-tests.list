@@ -21,4 +21,5 @@
 7|tests/p_lsb/lsb_release_brand_test.sh
 6|tests/p_python/20-python-mysql-test.sh
 6|tests/r_pdf/01_pdf-test.sh
+6|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
 
