@@ -2,4 +2,4 @@
 
 
 
-(/usr/bin/find ./tests/$1/ -type f -executable|sort -t'/' )
+(/usr/bin/find ./tests/$1/ -type f -perm /u=x|sort -t'/' )
