@@ -36,3 +36,16 @@
 6|tests/p_centos-release/centos-release_issue.sh
 6|tests/p_centos-release/centos-release_system_release.sh
 6|tests/p_lsb/lsb_release_brand_test.sh
+5|tests/p_squid/0-install_squid.sh
+5|tests/p_squid/squid_test.sh
+5|tests/p_php_7.3/10_php_api.sh
+5|tests/p_php_7.3/20_php_mariadb.sh
+5|tests/p_selinux/selinux_alerts.sh
+5|tests/p_selinux/selinux_policy_mismatch.sh
+5|tests/p_php_7.2/10_php_api.sh
+5|tests/p_php_7.2/20_php_mariadb.sh
+5|tests/p_curl/curl_test.sh
+5|tests/p_tomcat/tomcat_manager_test.sh
+5|tests/p_tomcat/tomcat_test.sh
+5|tests/p_freeradius/10_radiusd_test.sh
+5|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
