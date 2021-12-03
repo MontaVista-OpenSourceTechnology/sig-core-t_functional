@@ -50,3 +50,5 @@
 5|tests/p_freeradius/10_radiusd_test.sh
 5|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
 5|tests/p_centos-release/centos-release_centos-base_repos.sh
+5|tests/p_bind/0-install_bind.sh
+5|tests/p_bind/bind_test.sh
