@@ -49,3 +49,4 @@
 5|tests/p_tomcat/tomcat_test.sh
 5|tests/p_freeradius/10_radiusd_test.sh
 5|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
+5|tests/p_centos-release/centos-release_centos-base_repos.sh
