@@ -2,16 +2,11 @@
 
 # Ensure plugin is enabled :
 
-if [ "$centos_ver" -eq "8" ] ; then
+if [ "$centos_ver" -ge "8" ] ; then
  t_Log "yum is replaced by dnf on el8. SKIP"
  exit 0
 fi
 
-
-if [ "$PRE_UPDATES" == "1" ]; then
-  t_Log "skipping $0 for pre update testing"
-  exit 0
-fi
 
 isAltArch=$(uname -m|egrep -q 'armv7l|aarch64|ppc64|ppc64le'|| echo 1 && echo 0)
 
