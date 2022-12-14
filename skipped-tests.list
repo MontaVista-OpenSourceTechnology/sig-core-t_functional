@@ -32,6 +32,7 @@
 7|tests/p_lsb/lsb_release_brand_test.sh
 7|tests/p_grub2/01_grub2_secureboot_signed.sh
 7|tests/p_bash/bash_version_info_test.sh
+7|tests/r_check_mod_packages/01_modpackages.sh
 6|tests/p_python/20-python-mysql-test.sh
 6|tests/r_pdf/01_pdf-test.sh
 6|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
