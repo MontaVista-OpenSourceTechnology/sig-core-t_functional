@@ -10,6 +10,7 @@
 9|tests/p_centos-release/centos-release_system_release.sh
 9|tests/p_httpd/httpd_centos_brand_server_tokens.sh
 9|tests/p_httpd/httpd_centos_brand_welcome.sh
+8|tests/0_common/50_test_comps.sh
 8|tests/p_gzip/30-gzexe-test|https://apps.centos.org/kanboard/project/23/task/833
 8|tests/p_diffutils/10-cmp-tests|https://bugzilla.redhat.com/show_bug.cgi?id=1732960
 8|tests/p_centos-release/centos-release_centos-base_repos.sh
