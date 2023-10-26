@@ -190,7 +190,7 @@ function t_GetPkgVer
 # Description: get the arch
 function t_GetArch
 {
-	rpm -q $(rpm -qf /etc/redhat-release) --queryformat '%{arch}\n'
+	rpm -q kernel --queryformat '%{arch}\n' | head -n 1
 }
 
 # Set the arch
@@ -233,6 +233,11 @@ function t_Select_Alternative
 	t_Log "Selecing alternative $option for $name--$search"
 	/bin/echo "$option"|/usr/sbin/alternatives --config "$name" >/dev/null 2>&1
 }
+
+# should help with sometimes commands triggering pager and waiting for user input
+export PAGER=cat
+export SYSTEMD_PAGER=cat
+
 export -f t_Log
 export -f t_CheckExitStatus
 export -f t_InstallPackage
