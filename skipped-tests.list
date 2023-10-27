@@ -10,6 +10,9 @@
 9|tests/p_centos-release/centos-release_system_release.sh
 9|tests/p_httpd/httpd_centos_brand_server_tokens.sh
 9|tests/p_httpd/httpd_centos_brand_welcome.sh
+9|tests/p_grub2/01_grub2_secureboot_signed.sh
+9|tests/p_kernel/02_kernel_secureboot_signed.sh
+9|tests/p_shim/01_shim_secureboot_signed.sh
 8|tests/0_common/50_test_comps.sh
 8|tests/p_gzip/30-gzexe-test|https://apps.centos.org/kanboard/project/23/task/833
 8|tests/p_diffutils/10-cmp-tests|https://bugzilla.redhat.com/show_bug.cgi?id=1732960
@@ -20,6 +23,8 @@
 8|tests/p_httpd/httpd_centos_brand_welcome.sh
 8|tests/p_lsb/lsb_release_brand_test.sh
 8|tests/p_kernel/02_kernel_secureboot_signed.sh
+8|tests/p_grub2/01_grub2_secureboot_signed.sh
+8|tests/p_shim/01_shim_secureboot_signed.sh
 7|tests/p_java-openjdk/0-install-openjdk.sh
 7|tests/p_java-openjdk/10-test_java.sh
 7|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
