@@ -25,6 +25,7 @@
 8|tests/p_kernel/02_kernel_secureboot_signed.sh
 8|tests/p_grub2/01_grub2_secureboot_signed.sh
 8|tests/p_shim/01_shim_secureboot_signed.sh
+8|tests/p_podman/00_install_podman.sh
 8|tests/p_podman/10_podman_tests.sh
 8|tests/p_podman/15_podman_socket_tests.sh
 7|tests/p_java-openjdk/0-install-openjdk.sh
