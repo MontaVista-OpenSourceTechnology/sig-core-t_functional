@@ -3,6 +3,9 @@
 
 t_Log "Running $0 - crontab will run daily jobs."
 
+# Clear out existing daily cron tasks
+rm -rf /etc/cron.daily/*
+
 # Add a test cron
 cat > /etc/cron.daily/test.sh<<EOF
 #!/bin/sh
