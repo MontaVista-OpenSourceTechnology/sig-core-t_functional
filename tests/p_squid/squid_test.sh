@@ -11,6 +11,9 @@ else
   CHECK_FOR="ks_cfg"
 fi
 
+# Wait for squid to finish starting fully
+sleep 5
+
 squidclient -T 2 ${URL} | grep "${CHECK_FOR}"  >/dev/null 2>&1
 
 t_CheckExitStatus $?
