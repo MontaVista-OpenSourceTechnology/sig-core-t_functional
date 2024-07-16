@@ -9,7 +9,7 @@ fi
 ret_val=1
 
 # send mail to localhost
-mail=$(echo -e "helo localhost\nmail from: root@localhost\nrcpt to: root@localhost\ndata\nt_functional test\n.\nquit\n" | nc -w 5 127.0.0.1 25 | grep accepted)
+mail=$(echo -e "helo localhost\r\nmail from: root@localhost\r\nrcpt to: root@localhost\r\ndata\r\nt_functional test\r\n.\r\nquit\r\n" | nc -w 5 127.0.0.1 25 | grep accepted)
 MTA_ACCEPT=$?
 if [ $MTA_ACCEPT == 0 ]
   then
