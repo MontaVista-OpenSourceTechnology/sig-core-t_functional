@@ -7,8 +7,8 @@ FILE=/var/tmp/index.html
 
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  CHECK_FOR="timestamp"
-  URL="http://mirror.centos.org/"
+  CHECK_FOR="Linux"
+  URL="http://kernel.org/"
 else
   CHECK_FOR="CentOS"
   URL="http://repo.centos.qa/srv/CentOS/"
