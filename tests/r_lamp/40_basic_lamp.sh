@@ -21,7 +21,13 @@ then
 else
   t_InstallPackage httpd mariadb mariadb-server php php-mysqlnd wget
 fi
-t_ServiceControl mysqld restart
+
+if [ $centos_ver -ge 8 ]
+then
+  t_ServiceControl mariadb restart
+else
+  t_ServiceControl mysqld restart
+fi
 t_ServiceControl httpd restart
 
 # Initializing a small MySQL db
