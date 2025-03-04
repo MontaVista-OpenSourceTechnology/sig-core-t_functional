@@ -4,7 +4,7 @@
 t_Log "Running $0 - Squid test."
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  URL="http://mvista.com/"
+  URL="https://www.mvista.com/"
   CHECK_FOR="MontaVista"
 else
   URL="http://repo.centos.qa/qa/"
