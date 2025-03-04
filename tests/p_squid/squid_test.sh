@@ -4,8 +4,8 @@
 t_Log "Running $0 - Squid test."
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  URL="http://kernel.org/"
-  CHECK_FOR="kernel"
+  URL="http://mvista.com/"
+  CHECK_FOR="MontaVista"
 else
   URL="http://repo.centos.qa/qa/"
   CHECK_FOR="ks_cfg"

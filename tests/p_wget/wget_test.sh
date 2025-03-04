@@ -7,8 +7,8 @@ FILE=/var/tmp/index.html
 
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  CHECK_FOR="Linux"
-  URL="http://kernel.org/"
+  CHECK_FOR="MontaVista"
+  URL="http://mvista.com/"
 else
   CHECK_FOR="CentOS"
   URL="http://repo.centos.qa/srv/CentOS/"

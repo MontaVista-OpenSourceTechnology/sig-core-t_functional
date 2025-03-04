@@ -10,8 +10,8 @@ fi
 
 
 if [ "$SKIP_QA_HARNESS" = "1" ] ; then
-  URL="http://kernel.org/"
-  CHECK_FOR="Linux"
+  URL="http://mvista.com/"
+  CHECK_FOR="MontaVista"
 else
   URL="http://repo.centos.qa/qa/"
   CHECK_FOR="ks_cfg"

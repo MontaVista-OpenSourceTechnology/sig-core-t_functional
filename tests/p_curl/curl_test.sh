@@ -6,8 +6,8 @@ t_Log "Running $0 - curl can access http-host and retrieve index.html."
 
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  CHECK_FOR="Linux"
-  URL="http://kernel.org/"
+  CHECK_FOR="MontaVista"
+  URL="http://mvista.com/"
 else
   CHECK_FOR="Index of /srv"
   URL="http://repo.centos.qa/srv/CentOS/"
