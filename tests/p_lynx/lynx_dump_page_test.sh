@@ -10,8 +10,13 @@ fi
 
 
 if [ "$SKIP_QA_HARNESS" = "1" ] ; then
-  URL="http://mvista.com/"
-  CHECK_FOR="MontaVista"
+  if [[ "$centos_ver" -ge 7 ]]; then
+    URL="http://mvista.com/"
+    CHECK_FOR="MontaVista"
+  else
+    CHECK_FOR="NeverSSL"
+    URL="http://neverssl.com"
+  fi
 else
   URL="http://repo.centos.qa/qa/"
   CHECK_FOR="ks_cfg"

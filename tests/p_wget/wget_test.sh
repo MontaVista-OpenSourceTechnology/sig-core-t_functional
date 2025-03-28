@@ -7,8 +7,13 @@ FILE=/var/tmp/index.html
 
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  CHECK_FOR="MontaVista"
-  URL="http://mvista.com/"
+  if [[ "$centos_ver" -ge 7 ]]; then
+    CHECK_FOR="MontaVista"
+    URL="http://mvista.com/"
+  else
+    CHECK_FOR="NeverSSL"
+    URL="http://neverssl.com"
+  fi
 else
   CHECK_FOR="CentOS"
   URL="http://repo.centos.qa/srv/CentOS/"
