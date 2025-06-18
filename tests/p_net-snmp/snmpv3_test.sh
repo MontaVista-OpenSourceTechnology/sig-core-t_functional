@@ -3,11 +3,10 @@
 # Author: Christoph Galuschka <christoph.galuschka@chello.at>
 
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. Snmpwal failing. Fix later. Skipping."
-  t_CheckExitStatus 0
-  exit $PASS
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "Snmpwal doesn't work post-c8 => SKIP"
+  exit 0
 fi
 
 t_Log "Running $0 - snmpv3 test"

@@ -5,9 +5,9 @@ t_SkipReleaseLessThan 8 'no modularity'
 
 API='20170718'
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. Php 7.2 module not present. Skipping."
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "PHP 7.2 does not exist post-c8 => SKIP"
   t_CheckExitStatus 0
   exit $PASS
 fi

@@ -6,9 +6,9 @@ if [ "$CONTAINERTEST" -eq "1" ]; then
     exit 0
 fi
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. mailman not present. Skipping."
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "mailman does not exist post-c8 => SKIP"
   t_CheckExitStatus 0
   exit $PASS
 fi

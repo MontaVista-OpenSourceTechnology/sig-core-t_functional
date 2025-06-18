@@ -1,10 +1,9 @@
 #!/bin/bash
 # Author: Athmane Madjoudj <athmanem@gmail.com>
 
-
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. redhat-lsb not present. Skipping."
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "redhat-lsb does not exist post-c8 => SKIP"
   t_CheckExitStatus 0
   exit $PASS
 fi

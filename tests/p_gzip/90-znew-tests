@@ -4,9 +4,10 @@
 # Test znew - converts .Z files to .gz
 # Create a test file
 
-if (t_GetPkgRel basesystem | grep -q el9)
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]
 then
-  t_Log "This is a C9 system. Ncompress not present. Skipping."
+  t_Log "ncompress not present post-c8 => SKIP"
   t_CheckExitStatus 0
   exit $PASS
 fi

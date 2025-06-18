@@ -2,11 +2,10 @@
 # Author: Christoph Galuschka <tigalch@tigalch.org>
 #         Rene Diepstraten <rene@renediepstraten.nl>
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. Skipping."
-  t_CheckExitStatus 0
-  exit $PASS
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "arpwatch does not exist post-c8 => SKIP"
+  exit 0
 fi
 
 t_Log "Running $0 - arpwatch on interface with default gateway"

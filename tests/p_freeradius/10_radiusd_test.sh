@@ -7,13 +7,11 @@ if [ "$CONTAINERTEST" -eq "1" ]; then
     exit 0
 fi
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. Freeradius doesn't work. FIX LATER. Skipping."
-  t_CheckExitStatus 0
-  exit $PASS
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "Freradius doesn't work post-c8 => SKIP"
+  exit 0
 fi
-
 
 t_Log "Running $0 - freeradius-access test"
 

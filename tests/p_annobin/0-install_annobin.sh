@@ -7,6 +7,12 @@ if [ "$centos_ver" -lt "8" ]; then
   exit 0
 fi
 
+# Skip if after CentOS 9
+if [ "$centos_ver" -gt "9" ]; then
+  t_Log "annobin does not exist post-c9 => SKIP"
+  exit 0
+fi
+
 # Install annobin and gcc
 t_Log "Running $0 - installing annobin and gcc."
 

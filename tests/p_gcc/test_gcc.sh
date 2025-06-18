@@ -10,7 +10,7 @@ EXE='/var/tmp/gcc'
 
 cat > $FILE <<EOF
 #include <stdio.h>
-main()
+void main()
 {
        printf("hello, centos\n");
 }

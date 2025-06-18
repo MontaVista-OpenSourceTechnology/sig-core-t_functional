@@ -4,13 +4,9 @@
 t_Log "Running $0 - CentOS Anaconda patch is applied test."
 
 uname_arch=$(uname -m)
-if [ "$centos_ver" -eq "8" ]; then
-  t_Log "c8 => SKIPPING"
-  exit 0
-fi
-
-if [ "$centos_ver" -eq "9" ]; then
-  t_Log "c9 => SKIPPING"
+# Skip if after CentOS 7
+if [ "$centos_ver" -gt "7" ]; then
+  t_Log "Skip post-c7 => SKIP"
   exit 0
 fi
 

@@ -8,7 +8,7 @@ if [ $centos_ver = 6 ]
 then
     X --wrong-arg   2>&1 | grep -q 'wiki.centos.org'
 else
-    t_Log "CentOS 5 Xorg does not need checking"
+    t_Log "Xorg does not need checking"
 fi
 
 

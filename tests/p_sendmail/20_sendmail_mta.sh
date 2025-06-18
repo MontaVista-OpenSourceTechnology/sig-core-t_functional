@@ -6,6 +6,13 @@ if [ "$CONTAINERTEST" -eq "1" ]; then
     t_Log "Running in container -> SKIP"
     exit 0
 fi
+
+# Skip if after CentOS 9
+if [ "$centos_ver" -gt "9" ]; then
+  t_Log "sentmail does not exist post-c9 => SKIP"
+  exit 0
+fi
+
 ret_val=1
 
 # send mail to localhost

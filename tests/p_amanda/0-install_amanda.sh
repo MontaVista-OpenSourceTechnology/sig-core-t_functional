@@ -12,11 +12,10 @@ then
   exit $PASS
 fi
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. Amanda not present. Skipping."
-  t_CheckExitStatus 0
-  exit $PASS
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "amanda does not exist post-c8 => SKIP"
+  exit 0
 fi
 
 t_InstallPackage amanda amanda-server amanda-client

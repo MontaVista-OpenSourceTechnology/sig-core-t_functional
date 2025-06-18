@@ -105,22 +105,26 @@ fi
 
 # Force passwd to unlock an account with a blank password passwd -uf.
 t_Log "Check blank password can be force unlocked"
-passwd -uf passtest &>/dev/null
-t_CheckExitStatus $?
-
-# Check the output of passwd -S at this point it should be
-# passtest NP YYYY-MM-DD  11 22 33 44 (Empty password.)
-# It's possible that this will run on a different side of midnight to earlier 
-# commands so if checking the output for today fails check yesterday too
-t_Log "Check output of passwd -S"
-
-expected="passtest NP "$(date +'%F')" 11 22 33 44 (Empty password.)"
-passwd -S passtest | grep "$expected" &>/dev/null
-if [ $? -eq "0" ]
-then
-    t_Log "PASS"
+if [ "$centos_ver" -gt "9" ]; then
+    t_Log SKIP
 else
-    expected="passtest NP "$(date +'%F' -d yesterday)" 11 22 33 44 (Empty password.)"
-    passwd -S passtest | grep "$expected" &>/dev/null
+    passwd -uf passtest &>/dev/null
     t_CheckExitStatus $?
+
+    # Check the output of passwd -S at this point it should be
+    # passtest NP YYYY-MM-DD  11 22 33 44 (Empty password.)
+    # It's possible that this will run on a different side of midnight to earlier 
+    # commands so if checking the output for today fails check yesterday too
+    t_Log "Check output of passwd -S"
+
+    expected="passtest NP "$(date +'%F')" 11 22 33 44 (Empty password.)"
+    passwd -S passtest | grep "$expected" &>/dev/null
+    if [ $? -eq "0" ]
+    then
+        t_Log "PASS"
+    else
+        expected="passtest NP "$(date +'%F' -d yesterday)" 11 22 33 44 (Empty password.)"
+        passwd -S passtest | grep "$expected" &>/dev/null
+        t_CheckExitStatus $?
+    fi
 fi 

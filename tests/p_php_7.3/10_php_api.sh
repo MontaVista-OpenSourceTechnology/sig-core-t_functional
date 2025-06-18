@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if (t_GetPkgRel basesystem | grep -q el9)
-then
-  t_Log "This is a C9 system. Modular php not present. Skipping."
+# Skip if after CentOS 8
+if [ "$centos_ver" -gt "8" ]; then
+  t_Log "PHP 7.3 does not exist post-c8 => SKIP"
   t_CheckExitStatus 0
   exit $PASS
 fi

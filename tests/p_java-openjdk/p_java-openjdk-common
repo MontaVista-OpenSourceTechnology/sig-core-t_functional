@@ -8,6 +8,8 @@ if [ ${centos_ver} -eq 8 ];then
 JAVA_VERSIONS="1.8.0 11"
 elif [ ${centos_ver} -eq 9 ];then
 JAVA_VERSIONS="1.8.0 11 17"
+elif [ ${centos_ver} -eq 10 ];then
+JAVA_VERSIONS="21"
 else
 JAVA_VERSIONS="1.7.0 1.8.0 11"
 
