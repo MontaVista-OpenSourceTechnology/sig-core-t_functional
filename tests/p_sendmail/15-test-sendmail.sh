@@ -5,7 +5,7 @@ t_Log "Running $0 - testing if /usr/sbin/sendmail for sendmail is sane."
 
 # Skip if after CentOS 9
 if [ "$centos_ver" -gt "9" ]; then
-  t_Log "sentmail does not exist post-c9 => SKIP"
+  t_Log "sendmail does not exist post-c9 => SKIP"
   exit 0
 fi
 
