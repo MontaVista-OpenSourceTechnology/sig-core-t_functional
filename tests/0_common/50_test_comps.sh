@@ -13,8 +13,8 @@ if [ "$centos_ver" -eq "7" ]; then
     exit 0
 fi
 
-# Get **all** the group IDs
-ALL_GROUPS=`dnf group list -v --hidden | grep '^   ' | sed 's/.*(\(.*\))$/\1/'`
+# Get **all** the group IDs except epel groups
+ALL_GROUPS=`dnf --disablerepo=$(dnf repolist | grep -i epel | cut -d ' ' -f 1) group list -v --hidden | grep '^   ' | sed 's/.*(\(.*\))$/\1/'`
 
 for GROUP in $ALL_GROUPS; do
     t_Log " - testing group $GROUP"
