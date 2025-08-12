@@ -14,6 +14,7 @@
 10|tests/p_httpd/httpd_centos_brand_welcome.sh
 10|tests/p_kernel/02_kernel_secureboot_signed.sh
 10|tests/p_shim/01_shim_secureboot_signed.sh
+10|tests/0_common/50_test_comps.sh
 9|tests/p_openssh/sshd_user_login-with-key.sh
 9|tests/p_centos-release/centos-release_centos-base_repos.sh
 9|tests/p_centos-release/centos-release_release_compat_symlinks.sh
