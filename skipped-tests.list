@@ -39,6 +39,8 @@
 8|tests/p_podman/00_install_podman.sh
 8|tests/p_podman/10_podman_tests.sh
 8|tests/p_podman/15_podman_socket_tests.sh
+8|tests/p_php_7.2/10_php_api.sh
+8|tests/p_php_7.3/10_php_api.sh
 7|tests/p_java-openjdk/0-install-openjdk.sh
 7|tests/p_java-openjdk/10-test_java.sh
 7|tests/p_yum-plugin-fastestmirror/10-fastestmirror.sh
