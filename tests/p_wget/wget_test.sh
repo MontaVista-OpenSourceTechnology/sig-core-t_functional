@@ -11,8 +11,8 @@ if [ $SKIP_QA_HARNESS -eq 1 ]; then
     CHECK_FOR="MontaVista"
     URL="http://mvista.com/"
   else
-    CHECK_FOR="NeverSSL"
-    URL="http://neverssl.com"
+    CHECK_FOR="nossl"
+    URL="http://nossl.sh"
   fi
 else
   CHECK_FOR="CentOS"

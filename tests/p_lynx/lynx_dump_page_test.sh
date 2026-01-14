@@ -14,8 +14,8 @@ if [ "$SKIP_QA_HARNESS" = "1" ] ; then
     URL="http://mvista.com/"
     CHECK_FOR="MontaVista"
   else
-    CHECK_FOR="NeverSSL"
-    URL="http://neverssl.com"
+    CHECK_FOR="nossl"
+    URL="http://nossl.sh"
   fi
 else
   URL="http://repo.centos.qa/qa/"
