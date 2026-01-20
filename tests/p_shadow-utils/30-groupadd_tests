@@ -7,5 +7,5 @@ t_Log "Running $0 group add tests"
 sed -i /testgroup/d /etc/group
 
 echo "Create a new group"
-groupadd -g 1010 testgroup
+groupadd -g 2010 testgroup
 t_CheckExitStatus $?
