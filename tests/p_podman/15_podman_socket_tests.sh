@@ -2,6 +2,9 @@
 
 # Author: Carlos Rodriguez-Fernandez <carlosrodrifernandez@gmail.com>
 
+t_Log "SKIP $0: docker.io imposes rate limiting which doesn't allow this test to run (much) See: https://www.docker.com/increase-rate-limit"
+exit 0
+
 t_Log "Running $0 - podman socket tests"
 
 if [ "$centos_ver" -lt 8 ] ; then
